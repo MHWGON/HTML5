@@ -1,0 +1,345 @@
+/* margin样式初始化 */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol{
+	margin: 0px;
+}
+ul,ol{
+/* padding样式初始化 */
+	padding: 0px;
+}
+/* 列表样式初始化 */
+ul,ol,li{
+	list-style: none;
+}
+/* 文本样式初始化 */
+em,i{
+	font-style: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	vertical-align: top;
+	border: none;
+}
+/* BFC */
+.clear.after{
+	content: ;
+	display: block;
+    clear: both;
+}
+.clear {
+	zoom: 1;
+}
+/* #box {
+			margin: 30px auto;
+			width: 640px;
+			height: 1037px;
+			background: url(img/image1.png) no-repeat;
+			position: relative;
+			overflow: hidden;
+		}
+
+		#div1 {
+			width: 640px;
+			height: 1036px;
+			background: url(img/image2.png) no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			animation: 1s breath infinite;
+		}
+
+		#div3 {
+			width: 48px;
+			height: 42px;
+			background: url(img/image3.png) no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			left: 550px;
+			top: 82px;
+			animation: 1.2s star infinite;
+		}
+		
+		 #div2 img {
+			position: absolute;
+			left: 1000px;
+			top: 80px;
+			animation:1.5s moveWord linear;
+			left:0px;
+			top:20px;
+		}
+		#div4 img {
+			position:absolute;
+			left: 0px;
+			top: 314px;
+		}
+		
+		#div5 img {
+			position: absolute;
+			left:-110px;
+			top: 336px;
+			animation:2s movePig linear;
+			left:550px;
+			top:326px;
+		}
+
+        #div6 img {
+			position: absolute;
+			left:15px;
+			top: 420px;
+			animation: 1s light infinite;
+		}
+		#div7 img{
+			position: absolute;
+            left:120px;
+            top: 400px;
+			animation: 1.2s 0.5s money linear;
+		}
+		#div8 img{
+			position: absolute;
+			left: 460px;
+			top: 550px;
+			animation: 10s cloud linear;
+		}
+		#div9 img{
+			position:absolute;
+			left:206px;
+			top: 486px;
+		}
+		
+		#div10 img{
+			position:absolute;
+			left:255px;
+			top: 510px;
+			animation:0.7s 1.5s bolt infinite;
+		}
+		#div11 img{
+			position:absolute;
+			left:290px;
+			top: 685px;
+			animation:0.7s 1.5s bolt infinite;
+		}
+		#div12 img {
+			position: absolute;
+			left: 20px;
+			top: 960px;
+			animation: 2s moveHand linear;
+			left: 20px;
+			top: 740px;
+		}
+		#div13 img{
+			position: absolute;
+			left: 365px;
+			top: 960px;
+			animation: 2s moveHand linear;
+			left: 365px;
+			top: 740px;
+		}
+		#div14 img {
+			position: absolute;
+            left: 200px;
+			top: 902px;
+		}
+		#div15 img {
+			position: absolute;
+		    left: 212px;
+			top: 954px;
+		}
+		#div16 img{
+			position: absolute;
+			left: 364px;
+			top: 970px;
+			animation: 1.5s 1s moveIcon infinite;
+		}
+		#div17 img{
+			position: absolute;
+			left:500px;
+			top: 670px;
+			animation: 1s 0.5s light infinite;
+		}
+		#div18 img{
+			position: absolute;
+			left:60px;
+			top: 646px;
+			animation:4s iconBig linear infinite;
+		}
+		@keyframes breath {
+			from {
+				opacity: 0%;
+			}
+			50% {
+				opacity: 60%;
+			}
+			to {
+				opacity: 130%;
+			}
+		}
+
+		@keyframes star {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 200%;
+			}
+		}
+		
+		@keyframes moveWord{
+			from {
+				left:400px;
+				top:60px;
+			}
+			25% {
+				left:300px;
+				top:50px;
+			}
+			50% {
+				left:200px;
+				top:40px;
+			}
+			75% {
+				left:100px;
+				top:30px;
+			}
+			to {
+				left:0px;
+				top:20px;
+			}
+		}
+		
+		@keyframes movePig{
+			from {
+				left:-110px;
+				top:326px;
+			}
+			20% {
+				left:0px;
+				top:340px;
+			}
+			40% {
+				left:130px;
+				top:326px;
+			}
+			60% {
+				left:260px;
+				top:340px;
+			}
+			80% {
+				left:390px;
+				top:326px;
+			}
+			90% {
+				left:460px;
+				top:340px;
+			}
+			to {
+				left:550px;
+				top:326px;
+			}
+		}
+		
+		@keyframes light{
+			from{
+				opacity: 30%;
+			}
+			to{
+				opacity: 500%;
+			}
+		}
+		@keyframes money{
+			from{
+				left:120px;
+				top: 400px;
+				transform: rotate(0deg);
+			}
+			25% {
+				left:135px;
+				top: 500px;
+				transform: rotate(90deg);
+			}
+			50%{
+				left:120px;
+				top: 620px;
+				transform: rotate(180deg);
+			}
+			75% {
+				left:135px;
+				top: 730px;
+				transform: rotate(270deg);
+			}
+			to {
+				left:120px;
+				top: 850px;
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes cloud{
+			from{
+				left: 460px;
+				top: 550px;
+			}
+			25% {
+				left: 520px;
+				top: 500px;
+			}
+			50% {
+				left: 580px;
+				top: 600px;
+			}
+			75% {
+				left: 520px;
+				top: 550px;
+			}
+			to {
+				left: 460px;
+				top: 550px;
+			}
+		}
+	@keyframes bolt{
+		from{
+			opacity: 30%;
+		}
+		to{
+			opacity: 800%;
+		}
+	}
+	
+	@keyframes moveHand{
+		from{
+			top:960px ;
+		}
+		25% {
+			top: 900px;
+		}
+		50%{
+			top:840px;
+		}
+		75%{
+			top:780px;
+		}
+		to{
+			top: 740px;
+		}
+	}
+	@keyframes  moveIcon{
+		from{
+			left: 364px;
+			top: 970px;
+		}
+		to{
+			left: 376px;
+			top: 970px;
+		}
+	}
+	@keyframes iconBig{
+		from{
+			transform: rotate(0deg);
+		}
+		50% {
+			transform: rotate(180deg);
+		}
+		to{
+			transform: rotate(360deg);
+		}
+	} */

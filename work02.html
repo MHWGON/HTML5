@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<title>openai</title>
+<link href="css/reset.css" rel="stylesheet" />
+<head>
+	<style>
+		#icon1 {
+			width: 28px;
+			height: 28px;
+			fill: white;
+		}
+
+		#icon2 {
+			width: 64.16px;
+			height: 18.52px;
+			fill: white;
+		}
+
+		#header {
+			background: #e17f92 linear-gradient(to right, #ff4970, #ff6280, #d180ec);
+			height: 64.16px;
+			margin-bottom: 10px;
+		}
+
+		#nav_top {
+			padding-top: 5.83px;
+			margin-bottom: 5.83px;
+		}
+
+		.container {
+			height: 30px;
+			width: 1470px;
+			padding-left: 194px;
+			padding-top: 14.44px;
+		}
+
+		.container::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		.inon_left {
+			width: 28px;
+			float: left;
+		}
+
+		.inon_middle {
+			padding-top: 8px;
+			float: left;
+			padding-left: 216px;
+
+		}
+
+		.div_right {
+			height: 21.9px;
+			float: left;
+			padding-left: 320px;
+			padding-top: 7px;
+		}
+
+		ul:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		.div_right ul li {
+			float: left;
+			padding-right: 30px;
+		}
+
+		.div_right ul li:last-child {
+			padding-right: 0px;
+		}
+
+		.div_right ul li a {
+			color: white;
+		}
+
+		#container_top {
+			margin-top: -10px;
+			background: #e17f92 linear-gradient(to right, #ff4970, #ff6280, #d180ec);
+			height: 124.38px;
+			margin-bottom: 15px;
+		}
+
+		hr {
+			width: 1000px;
+			margin: auto;
+		}
+
+		#session_row {
+			margin-top: 15px;
+			padding-left: 194px;
+		}
+
+		#div_h6 {
+			font-size: 20px;
+			color: white;
+			height: 97.13px;
+			width: 130.3px;
+			float: left;
+		}
+
+		#div_h1 {
+			color: white;
+			height: 97.13px;
+			width: 510.09px;
+			float: left;
+			padding-left: 113px;
+		}
+
+		#learn {
+			color: white;
+			font-family: "arial rounded mt bold";
+		}
+
+		#session_middle {
+			margin-top: -15px;
+			height: 529.49px;
+			background: #e17f92 linear-gradient(to right, #ff4970, #ff6280, #d180ec);
+		}
+
+		#session_middle hr {
+			/* 	margin-bottom: 15px; */
+		}
+
+		#middle_h6 {
+			color: white;
+			padding-left: 194px;
+			font-size: 15px;
+			margin-top: 30px;
+			margin-bottom: 40px;
+		}
+
+		#image_four {
+			padding-left: 194px;
+			margin-bottom: 40px;
+		}
+
+		#image_four span {
+			margin-right: 20px;
+		}
+
+		#middel_bottom {
+			text-align: center;
+		}
+
+		#middel_bottom a {
+			color: white;
+			text-align: center;
+			font-size: 20px;
+			font-family: "arial, helvetica, sans-serif";
+		}
+
+		#div_word {
+			width: 625px;
+			height: 300px;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		#a_link {
+			color: dimgray;
+			font-size: 18px;
+		}
+
+		#session_word div p {
+			margin-top: 20px;
+			font-size: 26px;
+		}
+
+		#session_list {
+			height: 370px;
+			padding-left: 194px;
+		}
+
+		#session_list hr {
+			margin-left: -10px;
+			color: darkgray;
+			margin-top: 8px;
+			margin-bottom: 8px;
+		}
+
+		#session_list_h {
+			margin-top: 10px;
+			font-size: 15px;
+			margin-bottom: 10px;
+		}
+
+		#session_list a {
+			color: black;
+		}
+
+		#session_list a time {
+			color: darkgray;
+		}
+
+		#span_left {
+			width: 260px;
+			float: left;
+			margin-right: 7px;
+		}
+
+		#section_last {
+			padding-left: 194px;
+			height: 320px;
+			/* background-color: yellow; */
+		}
+
+		#span_left a {
+			font-size: 12px;
+			color: gray;
+		}
+
+		#span_middle {
+			float: left;
+			margin-right: 15px;
+		}
+
+		#span_right {
+			float: left;
+			width: 340px;
+			height: 280px;
+		}
+
+		#span_right ul li {
+			float: left;
+			margin-right: 15px;
+			margin-bottom: 15px;
+		}
+
+		#hr_last {
+			margin-top: 50px
+		}
+
+		#div_clear:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		#span_right ul:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		#footer {
+			height: 100px;
+			padding-left: 194px;
+		}
+
+		#div_icon {
+			float: left;
+		}
+
+		#divL ul li {
+			float: left;
+		}
+
+		#divL ul {
+			margin-left: 200px;
+		}
+
+		#divL ul li a {
+			font-size: 15px;
+			margin-right: 15px;
+			color: darkgray;
+		}
+
+		#divL ul:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		#footer:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<!-- 网页主题内容 -->
+	<main>
+		<div>
+			<header id="header">
+				<nav id="nav_top">
+					<div class="container">
+						<div class="inon_left">
+							<a href="/" title="提示" target="_blank">
+								<svg id="icon1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51 51">
+									<path d="M47.21,20.92a12.65,12.65,0,0,0-1.09-10.38A12.78,12.78,0,0,0,32.36,4.41,12.82,12.82,0,0,0,10.64,9a12.65,12.65,0,0,0-8.45,6.13,12.78,12.78,0,0,0,1.57,15A12.64,12.64,0,0,0,4.84,40.51a12.79,12.79,0,0,0,13.77,6.13,12.65,12.65,0,0,0,9.53,4.25A12.8,12.8,0,0,0,40.34,42a12.66,12.66,0,0,0,8.45-6.13A12.8,12.8,0,0,0,47.21,20.92ZM28.14,47.57a9.46,9.46,0,0,1-6.08-2.2l.3-.17,10.1-5.83a1.68,1.68,0,0,0,.83-1.44V23.69l4.27,2.47a.15.15,0,0,1,.08.11v11.8A9.52,9.52,0,0,1,28.14,47.57ZM7.72,38.85a9.45,9.45,0,0,1-1.13-6.37l.3.18L17,38.49a1.63,1.63,0,0,0,1.65,0L31,31.37V36.3a.17.17,0,0,1-.07.13L20.7,42.33A9.51,9.51,0,0,1,7.72,38.85Zm-2.66-22a9.48,9.48,0,0,1,5-4.17v12a1.62,1.62,0,0,0,.82,1.43L23.17,33.2,18.9,35.67a.16.16,0,0,1-.15,0L8.54,29.78A9.52,9.52,0,0,1,5.06,16.8ZM40.14,25,27.81,17.84l4.26-2.46a.16.16,0,0,1,.15,0l10.21,5.9A9.5,9.5,0,0,1,41,38.41v-12A1.67,1.67,0,0,0,40.14,25Zm4.25-6.39-.3-.18L34,12.55a1.64,1.64,0,0,0-1.66,0L20,19.67V14.74a.14.14,0,0,1,.06-.13L30.27,8.72a9.51,9.51,0,0,1,14.12,9.85ZM17.67,27.35,13.4,24.89a.17.17,0,0,1-.08-.12V13a9.51,9.51,0,0,1,15.59-7.3l-.3.17-10.1,5.83a1.68,1.68,0,0,0-.83,1.44Zm2.32-5,5.5-3.17L31,22.35v6.34l-5.49,3.17L20,28.69Z">
+									</path>
+								</svg>
+
+							</a>
+						</div>
+
+						<div class="inon_middle">
+							<a href="/" title="提示" target="_blank">
+								<svg id="icon2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 180">
+									<path d="M410.22,41.09c-13.75,0-23.57,4.7-28.39,13.59l-2.59,4.79V43.41h-22.4v97.85H380.4V83.05c0-13.91,7.55-21.89,20.73-21.89,12.56,0,19.76,7.76,19.76,21.31v58.79h23.56v-63C444.45,55,431.65,41.09,410.22,41.09ZM296,41.09c-27.79,0-45.06,17.33-45.06,45.25v13.74c0,26.83,17.42,43.51,45.45,43.51,18.74,0,31.88-6.88,40.15-21l-14.61-8.39c-6.11,8.15-15.86,13.19-25.54,13.19-14.19,0-22.67-8.76-22.67-23.44v-3.89h65.79V83.82c0-26-17.08-42.73-43.51-42.73Zm22.08,43.14H273.72V81.89c0-16.12,7.91-25,22.28-25,13.83,0,22.08,8.76,22.08,23.44ZM678.32,27.3V8.58H596.87V27.3h28.56v95.25H596.87v18.71h81.45V122.55H649.76V27.3ZM60.67,5.87c-36.39,0-59,22.68-59,59.18V84.79c0,36.51,22.6,59.18,59,59.18s59-22.67,59-59.18V65.05C119.66,28.55,97.05,5.87,60.67,5.87ZM95.33,86.14c0,24.24-12.63,38.15-34.66,38.15S26,110.38,26,86.14V63.7c0-24.24,12.63-38.15,34.66-38.15S95.32,39.46,95.32,63.7Zm98.31-45c-12.36,0-23.07,5.11-28.64,13.69l-2.54,3.9V43.41H140.07V174.93h23.55V127.3l2.53,3.74c5.3,7.85,15.65,12.55,27.68,12.55,20.31,0,40.8-13.28,40.8-42.93V84c0-21.35-12.63-42.91-41-42.91Zm17.44,58.4c0,15.77-9.2,25.57-24,25.57-13.8,0-23.44-10.35-23.44-25.18V85.23c0-15.06,9.72-25.57,23.63-25.57,14.7,0,23.83,9.8,23.83,25.57ZM509.55,8.63,462,141.26h23.9l9.1-28.44h54.65l.09.28,9,28.16h23.93L535.08,8.58Zm-8.67,85.52L522.32,27l21.23,67.07Z">
+									</path>
+								</svg>
+							</a>
+						</div>
+
+						<div class="div_right">
+							<ul id="ul_right">
+								<li>
+									<a href="https://openai.com/" title="提示" target="_blank">About</a>
+								</li>
+								<li>
+									<a href="https://openai.com/" title="提示" target="_blank">Process</a>
+								</li>
+								<li>
+									<a href="https://openai.com/" title="提示" target="_blank">Recourse</a>
+								</li>
+								<li>
+									<a href="https://openai.com/" title="提示" target="_blank">Blog</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<div id="container_top">
+				<hr id="hrL" />
+				<section id="session_row">
+					<div id="div_h6">
+						<h6>Our Work</h6>
+					</div>
+					<div id="div_h1">
+						<h1> Discovering and enacting the path <br />to safe artificial general intelligence.</h1>
+						<a id="learn" href="http://www.baidu.com" title="提示" target="_blank">LEARN MORE ></a>
+					</div>
+				</section>
+			</div>
+
+			<section id="session_middle">
+				<div>
+					<hr id="hrL" />
+					<h6 id="middle_h6">Recent Releases</h6>
+				</div>
+				<div id="image_four">
+					<span><a href="https://openai.com/" title="提示" target="_blank"><img src="https://cdn.openai.com/research-covers/image-gpt/2x-no-mark.jpg"
+							 alt="Image GPT1" style="width: 234;height: 312px;" /></a></span>
+					<span><a href="https://openai.com/" title="提示" target="_blank"><img src="https://cdn.openai.com/research-covers/jukebox/2x-no-mark.jpg"
+							 alt="Image GPT2" style="width: 234;height: 312px;" /></a></span>
+					<span><a href="https://openai.com/" title="提示" target="_blank"><img src="https://cdn.openai.com/research-covers/solving-rubiks-cube/2x-no-mark.jpg"
+							 alt="Image GPT3" style="width: 234;height: 312px;" /></a></span>
+					<span><a href="https://openai.com/" title="提示" target="_blank"><img src="https://cdn.openai.com/research-covers/emergent-tool-use/2x-no-mark.jpg"
+							 alt="Image GPT4" style="width: 234;height: 312px;" /></a></span>
+				</div>
+				<div id="middel_bottom">
+					<a href="https://openai.com/" title="提示" target="_blank">View Progress ></a>
+				</div>
+			</section>
+		</div>
+
+		<section id="session_word">
+			<div id="div_word">
+				<p style="text-align: left;">OpenAI is an AI research and deployment company based in San Francisco, California.
+					Our mission is to ensure that artificial general intelligence benefits all of humanity. The <a style="text-decoration: underline; color: black;"
+					 href="https://openai.com/charters">OpenAI Charter</a> OpenAI Charter describes the principles that guide us as we
+					execute on our mission. </p>
+				<a id="a_link" href="https://openai.com/" title="提示" target="_blank">Learn more ></a>
+			</div>
+		</section>
+
+		<section id="session_list">
+			<h6 id="session_list_h">Recent Blog Posts</h6>
+			<hr />
+			<a href="https://openai.com/" title="提示" target="_blank">
+				<time style="margin-right: 70px;" datetime="2020-07-09">July 9, 2020</time>
+				OpenAI Scholars Spring 2020: Final Projects
+			</a>
+
+			<hr />
+			<a href="https://openai.com/" title="提示" target="_blank">
+				<time style="margin-right: 70px;" datetime="2020-06-17">June 17, 2020</time>
+				Image GPT
+			</a>
+
+			<hr />
+			<a href="https://openai.com/" title="提示" target="_blank">
+				<time style="margin-right: 70px;" datetime="2020-06-11">June 11, 2020</time>
+				OpenAI API
+			</a>
+
+			<hr />
+			<a href="https://openai.com/" title="提示" target="_blank">
+				<time style="margin-right: 70px;" datetime="2020-06-09">June 9, 2020</time>
+				Procgen and MineRL Competitions
+			</a>
+
+			<hr />
+			<a href="https://openai.com/" title="提示" target="_blank">
+				<time style="margin-right: 70px;" datetime="2020-05-05">May 5, 2020</time>
+				AI and Efficiency
+			</a>
+			<hr />
+			<br />
+			<a href="https://openai.com/" title="提示" target="_blank">
+				IVEW BLOG >
+			</a>
+			<hr style="margin-top: 40px;" />
+		</section>
+
+		<section id="section_last">
+			<div id="div_clear">
+				<span id="span_left">
+					<h3 style="font-size: 20px; margin-bottom: 10px;">Join OpenAI</h3>
+					<p style="margin-bottom: 90px;">We’re hiring talented people in a variety of technical and nontechnical roles to
+						join our team in San Francisco.</p>
+					<a href="https://openai.com/" title="提示" target="_blank">VIEW OPEN POSITIONS ></a>
+				</span>
+				<span id="span_middle">
+					<img style="width: 360px; height: 250px;" src="https://cdn.openai.com/miscellaneous/photos/openai-2019-offsite-group-fun.jpg"
+					 alt="集会" />
+				</span>
+				<span id="span_right">
+					<ul>
+						<li><img style="width: 155px; height: 115px;" src="https://cdn.openai.com/miscellaneous/photos/openai-2018-robotics.jpg"
+							 alt="实验" title="1" /></li>
+						<li><img style="width: 155px; height: 115px;" src="https://cdn.openai.com/miscellaneous/photos/openai-2019-holiday-ben.jpg"
+							 alt="聚会" title="2" /></li>
+						<li><img style="width: 155px; height: 115px;;" src="https://cdn.openai.com/miscellaneous/photos/openai-2019-dota-finals.jpg"
+							 alt="合照" title="3" /></li>
+						<li><img style="width: 155px; height: 115px;" src="https://cdn.openai.com/miscellaneous/photos/openai-2019-offsite-chatting.jpg"
+							 alt="讨论" title="4" /></li>
+					</ul>
+				</span>
+			</div>
+		</section>
+	</main>
+
+
+	<!-- 网页底部内容 -->
+	<footer id="footer">
+		<hr style="margin-left: -15px; margin-bottom: 10px;" />
+		<div id="div_icon">
+			<a href="https://twitter.com/openai" target="_blank">
+				<svg style="width: 20px;height: 20px; fill: gray;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 18">
+					<path d="M7.86,17.93a12.84,12.84,0,0,0,13-12.63V5.11c0-.19,0-.39,0-.58A9.52,9.52,0,0,0,23.15,2.2a9.58,9.58,0,0,1-2.63.71,4.59,4.59,0,0,0,2-2.5,9.25,9.25,0,0,1-2.91,1.1A4.63,4.63,0,0,0,16.29.08a4.55,4.55,0,0,0-4.58,4.5,4.46,4.46,0,0,0,.12,1A13.05,13.05,0,0,1,2.4.91a4.46,4.46,0,0,0,1.42,6,4.52,4.52,0,0,1-2.07-.57v.06a4.53,4.53,0,0,0,3.67,4.42A5,5,0,0,1,4.21,11a4.12,4.12,0,0,1-.86-.09A4.55,4.55,0,0,0,7.62,14,9.34,9.34,0,0,1,.85,15.9a13.17,13.17,0,0,0,7,2"></path>
+				</svg>
+			</a>
+			<a href="https://twitter.com/openai" target="_blank">
+				<svg style="width: 20px;height: 20px; fill: gray;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+					<path d="M20,10A10,10,0,1,0,8.44,19.88v-7H5.9V10H8.44V7.8a3.52,3.52,0,0,1,3.77-3.89,15.72,15.72,0,0,1,2.24.19V6.56H13.19a1.45,1.45,0,0,0-1.63,1.56V10h2.78l-.45,2.89H11.56v7A10,10,0,0,0,20,10Z"></path>
+				</svg>
+			</a>
+		</div>
+		<div id="divL">
+			<ul>
+				<li>
+					<a href="https://openai.com/" title="提示1" target="_blank">About</a>
+					<a href="https://openai.com/" title="提示2" target="_blank">Progress</a>
+					<a href="https://openai.com/" title="提示3" target="_blank">Recourses</a>
+					<a href="https://openai.com/" title="提示4" target="_blank">BLOG</a>
+					<a href="https://openai.com/" title="提示5" target="_blank">Chacter</a>
+					<a href="https://openai.com/" title="提示6" target="_blank">Jobs</a>
+					<a href="https://openai.com/" title="提示7" target="_blank">Press</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+</body>
